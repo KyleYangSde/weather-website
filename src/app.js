@@ -148,6 +148,7 @@ app.listen(port, () => {
  * 再
  * git add .
  * git commit -m "Init commit"
+ * git push
  *
  * 转到github 用SSH
  * $ ls -a -l ~/.ssh
@@ -172,5 +173,6 @@ app.listen(port, () => {
   },
  *
  * npm run start  
- * 
+ * git remote
+ * git push heroku master
  */
