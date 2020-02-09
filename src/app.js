@@ -135,4 +135,16 @@ app.listen(3000, () => {
  * npm install就直接下载依赖了
  * .gitignore里加入不上传的文件
  *
+ * git add 加文件或者整个文件夹
+ * git src/
+ * git add .
+ * 这时候就已经staged了 可以commit了
+ *
+ * git commit -m "Init commit"
+ * 又变回白色了
+ * 黄色表示有改变但没有commit
+ * 再
+ * git add .
+ * git commit -m "Init commit"
+ *
  */
