@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Weather</title>
+    <link rel="icon" href="https://s2.ax1x.com/2020/02/08/1RRwb8.th.png">
+    <!-- css -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- js -->
+
+</head>
+
+<body>
+    <div class="main-content">
+        {{>header}}
+        <p>Use this site to get your weather!</p>
+        <form>
+            <input placeholder="location">
+            <button>Search</button>
+        </form>
+        <p id="message-1"></p>
+        <p id="message-2"></p>
+
+    </div>
+    {{>footer}}
+    {{!-- 需要换位置 在所有元素可得到的时候再去fetch  --}}
+    <script src="/js/app.js"></script>
+</body>
+
+</html>
