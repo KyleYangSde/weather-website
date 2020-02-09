@@ -16,7 +16,8 @@ weatherForm.addEventListener("submit", e => {
   messageOne.textContent = "Loading....";
   messageTwo.textContent = "";
   //在得到用户输入之后再去fetch data
-  fetch("http://localhost:3000/weather?address=" + location).then(response => {
+  //http://localhost:3000
+  fetch("/weather?address=" + location).then(response => {
     response.json().then(data => {
       if (data.error) {
         //console.log(data.error);

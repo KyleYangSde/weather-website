@@ -1,4 +1,6 @@
-//npm init -y
+//npm init -y 初始化npm
+
+const port = process.env.PORT || 3000;
 
 const express = require("express");
 //express是个function
@@ -101,9 +103,9 @@ app.get("*", (req, res) => {
     name: "Kyle Yang"
   });
 });
-
-app.listen(3000, () => {
-  console.log("server is up on port 3000");
+//把3000端口改掉 需要新的地址 可以硬编码
+app.listen(port, () => {
+  console.log("server is up on port " + port);
 });
 
 /***
@@ -147,4 +149,28 @@ app.listen(3000, () => {
  * git add .
  * git commit -m "Init commit"
  *
+ * 转到github 用SSH
+ * $ ls -a -l ~/.ssh
+ * ssh-keygen -t rsa -b 4096 -C "kyrie96521@gmail.com"  enter->enter
+ * eval "$(ssh-agent -s)"  开始ssh代理 会显示Agent pid 1739
+ * ssh-add  ~/.ssh/id_rsa ->Identity added: /c/Users/kyrie/.ssh/id_rsa (kyrie96521@gmail.com)
+ *
+ * cat  ~/.ssh/id_rsa.pub获得ssh key
+ * ssh -T git@github.com确认ssh key
+ */
+
+/**
+ * heroku deploy
+ * heroku keys:add
+ *
+ * heroku create kyleyang-weather-application
+ * app的url和git仓库的url
+ * https://kyleyang-weather-application.herokuapp.com/ | https://git.heroku.com/kyleyang-weather-application.git
+ * 现在需要deploy 告诉heroku去执行什么文件 script1里
+ *   "scripts": {
+    "start": "node src/app.js"
+  },
+ *
+ * npm run start  
+ * 
  */
