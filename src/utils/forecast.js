@@ -16,11 +16,11 @@ const forecast = (lat, long, callback) => {
       callback(
         undefined,
         response.body.daily.data[0].summary +
-          "It is curently " +
-          response.body.currently.temperature +
-          " degress out. There is a " +
-          response.body.currently.precipProbability +
-          " chance to rain"
+          "现在外面是 " +
+          ((response.body.currently.temperature - 32) / 1.8).toFixed(3) +
+          " 摄氏度， 并且有百分之 " +
+          response.body.currently.precipProbability * 100 +
+          " 的几率下雨。"
       );
     }
   });

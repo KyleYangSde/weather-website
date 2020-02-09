@@ -19,6 +19,7 @@ weatherForm.addEventListener("submit", e => {
   //http://localhost:3000
   fetch("/weather?address=" + location).then(response => {
     response.json().then(data => {
+      console.log(data);
       if (data.error) {
         //console.log(data.error);
         //能够显示在DOM里

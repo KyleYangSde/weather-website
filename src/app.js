@@ -71,13 +71,13 @@ app.get("/weather", (req, res) => {
     if (error) {
       return res.send({ error });
     }
-
+    console.log(data);
     forecast(data.latitude, data.longtitude, (error, forecastData) => {
       if (error) {
         return res.send({ error });
       }
       //返回给命令行
-      //console.log(res);
+
       res.send({
         forcast: forecastData,
         location: data.location,
@@ -175,4 +175,12 @@ app.listen(port, () => {
  * npm run start  
  * git remote
  * git push heroku master
+ * 
+ * 
+ * 更新
+ * git status 看改变
+ * git add
+ * git commit -m ""
+ * git push push到远端
+ * git push heroku master重新部署
  */
