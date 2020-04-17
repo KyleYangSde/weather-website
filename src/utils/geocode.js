@@ -8,7 +8,7 @@ const geocode = (address, callback) => {
     ".json?access_token=pk.eyJ1Ijoia3lsZTc4Nzg3OCIsImEiOiJjazZhOGo5OTUwbzB5M21wb3UwcXA2b3lnIn0.84uArURkoarhFK9-fimhkw&language=chinese";
 
   request({ url: url, json: true }, (error, response) => {
-    console.log(response.body);
+    
     if (error) {
       callback("Unable to connect to weather service", undefined);
     } else if (response.body.features.length === 0) {
